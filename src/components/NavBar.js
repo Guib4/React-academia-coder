@@ -1,18 +1,25 @@
 import React from "react";
-import "./NavBar.css"; // Opcional: arquivo para estilos personalizados
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const Navbar = () => {
   return (
-    <nav className="navbar">
-      <div className="brand">Minha Loja</div>
-      <ul className="categories">
-        <li><a href="#categoria1">Categoria 1</a></li>
-        <li><a href="#categoria2">Categoria 2</a></li>
-        <li><a href="#categoria3">Categoria 3</a></li>
-        <li><a href="#categoria4">Categoria 4</a></li>
+    <nav>
+      <h1>
+        <Link to="/">Minha Loja</Link>
+      </h1>
+      <ul>
+        <li>
+          <Link to="/category/1">Categoria 1</Link>
+        </li>
+        <li>
+          <Link to="/category/2">Categoria 2</Link>
+        </li>
+        <li>
+          <Link to="/category/3">Categoria 3</Link>
+        </li>
       </ul>
     </nav>
   );
 };
 
-export default NavBar;
+export default Navbar;
